@@ -6,10 +6,17 @@ To connect to mongodb get your connection string and paste it in ../server/model
 
 Directories used
 const express = require('express');
+
 const expressLayouts = require('express-ejs-layouts');
+
 const path = require('path')
+
 const bodyParser = require('body-parser')
+
 const mongoose = require('mongoose')
+
 const bcrypt = require('bcryptjs')
+
 const jwt = require('jsonwebtoken')
+
 const passport = require('passport');
