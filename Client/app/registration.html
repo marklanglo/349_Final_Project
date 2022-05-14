@@ -54,14 +54,13 @@
           <a href="http://localhost:4020/homepage.html" class="navbar-brand">
             <img src="ToyCarTradeLogo.PNG" alt="TOY CAR TRADE">
           </a>
-
         </div>
 				<ul class="navbar-nav w-80">
 			    <li class="nav-item">
 			      <a class="nav-link text-black text-navbar" href="#">SEARCH</a>
 			    </li>
 			    <li class="nav-item">
-			      <a class="nav-link text-black text-navbar" href="#">POST CAR</a>
+			      <a class="nav-link text-black text-navbar" href="http://localhost:4020/account.html">POST CAR</a>
 			    </li>
 			    <li class="nav-item">
 			      <a class="nav-link text-black text-navbar" href="#">AUCTIONS</a>
@@ -89,9 +88,20 @@
 			<div class="row">
 				<div class="card">
 					<div class="card-heading bg-primary text-light">
-						<h1>User Login</h1>
+						<h1>Registration Form</h1>
 					</div>
 					<div class="card-body">
+						<div class="form-group">
+			        <label for="firstName">Name</label>
+							<div class="form-inline">
+			        	<input type="text" class="form-control" id="firstName" placeholder="First">
+			        	<input type="text" class="form-control" id="lastName" placeholder="Last">
+							</div>
+			      </div>
+						<div class="form-group">
+			        <label for="username">Username</label>
+			        <input type="text" class="form-control" id="username" placeholder="Enter username">
+			      </div>
 						<div class="form-group">
 			        <label for="email">Email address</label>
 			        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
@@ -100,6 +110,10 @@
 						<div class="form-group">
 			        <label for="password">Password</label>
 			        <input type="password" class="form-control" id="password" placeholder="Password">
+			      </div>
+						<div class="form-group">
+			        <label for="passwordConfirmation">Password Confirmation</label>
+			        <input type="password" class="form-control" id="passwordConfirmation" placeholder="Confirm Password">
 			      </div>
 						<input type="submit" class="btn btn-primary" value="Submit">
 					</div>
