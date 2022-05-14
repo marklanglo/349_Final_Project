@@ -114,6 +114,10 @@
 			margin-left: 20px;
 			margin-right: 20px;
 		}
+		.cart-image{
+			width: 50px;
+			height:50px;
+		}
 
 	</style>
 	<body>
@@ -132,7 +136,7 @@
     <nav class="navbar navbar-expand-lg fixed-top bg-primary">
       <div class='container-fluid'>
         <div class="navbar-header">
-          <a href="./index.html" class="navbar-brand">
+          <a href="http://localhost:4020/homepage.html" class="navbar-brand">
             <img src="ToyCarTradeLogo.PNG" alt="TOY CAR TRADE">
           </a>
 
@@ -155,14 +159,19 @@
 			    </li>
 			  </ul>
 				<ul>
-        <button class="btn btn-success navbar-btn navbar-right">Register</button>
-        <button class="btn btn-dark navbar-btn navbar-right">Login</button>
+        <button class="btn btn-success navbar-btn navbar-right" onclick="location.href='http://localhost:4020/registration.html'">Register</button>
+        <button class="btn btn-dark navbar-btn navbar-right" onclick="location.href='http://localhost:4020/login.html'">Login</button>
 				</ul>
+				<div class="navbar-header">
+          <a href="./index.html" class="navbar-brand">
+            <img class="cart-image" src="cart.png" alt="Shopping Cart">
+          </a>
+        </div>
       </div>
     </nav>
 
 		<!--This is the top carousel code--->
-		<div class="carousel slide bg-dark" id="mainBanner" data-ride="carousel" data-interval="3000">
+		<div class="carousel slide bg-dark" id="mainBanner" data-ride="carousel" data-interval="5000">
 			<div class="carousel-inner" role="listbox">
 				<div class="carousel-item active">
 					<img class="item carouselImage mx-auto d-block" src="slide3.jpg" alt="Advert 1">
@@ -175,7 +184,7 @@
 					<img class="item carouselImage mx-auto d-block" src="slide2.jpeg" alt="Advert 2">
 					<div class="carousel-caption text-black">
 						<h1 class="display-2">POST CARS TO SELL</h1>
-						<button class="openBtn">CLICK HERE TO REGISTER AND POST CARS</button>
+						<button onclick="location.href='http://localhost:4020/registration.html'" class="openBtn">CLICK HERE TO REGISTER AND POST CARS</button>
 					</div>
 				</div>
 				<div class="carousel-item">
@@ -194,7 +203,6 @@
 		</div>
 
 		<script src="bootstrap/js/bootstrap.min.js"></script>
-
 		<!--This script is used to activate the search overlay-->
 		<script>
 			function openSearch() {
