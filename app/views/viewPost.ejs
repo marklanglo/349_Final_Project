@@ -111,31 +111,33 @@
             </div>
         </div>
     </nav>
-
+	
 		<div class="container text-body bg-soft-blue">
+			<% if(car != null) {%>
 			<h3 class="bg-primary text-light text-center">Post Details</h3>
 			<form>
 				<div class="post-row">
 					<span class="post-column post-attribute">Car Name: </span>
-					<span class="post-column post-enter" id="carName">SS Camaro</span>
+					<span class="post-column post-enter" id="carName"><%- car.carName%></span>
 				</div>
 				<div class="post-row">
 					<span class="post-column post-attribute">Car Price: </span>
-					<span class="post-column post-enter" id="carPrice">$15.00</span>
+					<span class="post-column post-enter" id="carPrice">$<%- car.carPrice%></span>
 				</div>
 				<div class="post-row">
 					<span class="post-column post-attribute">Car Description: </span>
-					<span class="post-column post-enter" id="carDescription">This is a 1964 Camaro SS made by Matchbox in 2015.</span>
+					<span class="post-column post-enter" id="carDescription"><%- car.carDescription%></span>
 				</div>
 				<img src="/img/slide3.jpg" class="post-item-image">
-				<div class="post-row">
+				<!-- <div class="post-row">
 					<span class="post-column post-attribute">Posted By User: </span>
 					<span class="post-column post-enter" id="posterName">JohnnyC</span>
-				</div>
+				</div> -->
 				<div>
 					<button class="post-button btn btn-success">Add to Cart</button>
 				</div>
 			</form>
+			<%}%>
 		</div>
 
 		<script src="bootstrap/js/bootstrap.min.js"></script>

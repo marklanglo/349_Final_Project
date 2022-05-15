@@ -170,7 +170,7 @@ exports.exploreCar = async (req, res) => {
 		let carID = req.params.id;
 
 		const car = await Car.findById(carID);
-		res.render('viewPost', { title: 'Toy Car Trade - View Post', carID });
+		res.render('viewPost', { title: 'Toy Car Trade - View Post', car });
 	} catch (error) {
 		res.status(500).send({ message: error.message || "Error Occured" });
 	}
