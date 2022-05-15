@@ -35,7 +35,8 @@ exports.registerPage = async(req, res) => {
  * Register Submit
  */
  exports.registerPageOnSubmit = async(req, res) => {
-    const { firstName, lastName, email, userName, password: plainTextPassword, passwordConfirmation:plainTextPasswordConfirmation } = req.body
+    const { firstName, lastName, email, userName, password: plainTextPassword, 
+		passwordConfirmation:plainTextPasswordConfirmation, phoneNumber } = req.body
 
 	if (!firstName || typeof firstName !== 'string') {
 		return res.json({ status: 'error', error: 'Invalid First Name' })
@@ -51,7 +52,9 @@ exports.registerPage = async(req, res) => {
 	if (!userName || typeof userName !== 'string') {
 		return res.json({ status: 'error', error: 'Invalid username' })
 	}
-
+	if (!phoneNumber || typeof phoneNumber !== 'string') {
+		return res.json({ status: 'error', error: 'Invalid phone number' })
+	}
 	if (!plainTextPassword || typeof plainTextPassword !== 'string') {
 		return res.json({ status: 'error', error: 'Invalid password' })
 	}
@@ -75,6 +78,7 @@ exports.registerPage = async(req, res) => {
 			lastName,
 			email,
 			userName,
+			phoneNumber,
 			password,
 			plainTextPasswordConfirmation
 		})
