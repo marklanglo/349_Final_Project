@@ -3,5 +3,155 @@
 body {
     background-image: url("/img/cars-are-cool.jpg");
     background-color: rgba(243, 243, 243, 0.629);
-    
+
+}
+
+.text-orange{
+  color: #E85900;
+}
+
+.text-red{
+  color: #C40000;
+}
+
+.text-darkred{
+  color: #910000;
+}
+.text-black{
+  color: #000
+}
+.text-navbar{
+  font-size: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.text-body{
+  margin:auto;
+  margin-top:150px;
+}
+.bg-soft-blue{
+  background-color: #ABD7EB;
+}
+.cart-image{
+  width: 50px;
+  height:50px;
+}
+.btn-new-post{
+  margin: 10px;
+}
+.cart-header{
+  font-weight:bold;
+  font-size: 1.2em;
+  color: #333;
+}
+.cart-column{
+  display:flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  margin-right: 1.5em;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+.cart-row{
+  display:flex;
+}
+.cart-item{
+  width:55%;
+}
+.cart-price{
+  width:45%;
+  font-size:1.2em;
+  color:#333;
+}
+.cart-item-title{
+  color:#333;
+  margin-left:.5em;
+  font-size:1.2em;
+}
+.cart-item-image{
+  width: 75px;
+  height: auto;
+  border-radius: 10px;
+}
+.cart-row:last-child{
+  border-bottom: 1px solid black;
+}
+.cart-row:last-child .cart-column{
+  border:none;
+}
+.cart-total{
+  text-align: end;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.cart-total-title{
+  font-weight: bold;
+  font-size: 1.5em;
+  color: black;
+  margin-right: 20px;
+}
+.cart-total-price{
+  color: #333;
+  font-size:1.2em;
+}
+.btn-purchase{
+  display:block;
+  margin:40px auto 40px auto;
+}
+.post-item-image{
+  width: 200px;
+  height: auto;
+  border-radius: 20px;
+}
+.post-column{
+  display:flex;
+  align-items: center;
+  margin-right: 1.5em;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+.post-row{
+  display:flex;
+  border-bottom: 1px solid black;
+}
+.post-image{
+  width:40%;
+}
+.post-name{
+  width:20%;
+}
+.post-price{
+  width:20%;
+}
+.post-delete{
+  width:20%;
+}
+.post-container{
+  display:flex;
+  margin:auto;
+  margin-top:150px;
+}
+.post-row-car{
+  display:flex;
+}
+.post-attribute{
+  width: 10%;
+}
+.post-enter{
+  width:90%;
+}
+.post-button{
+  display:block;
+  margin:40px auto 40px auto;
+}
+.post-item-image-car{
+  display:block;
+  margin:12px auto 12px auto;
+  width: 350px;
+  height: auto;
+  border-radius: 20px;
+}
+.post-item-description{
+  display:block;
+  text-align:center;
 }
