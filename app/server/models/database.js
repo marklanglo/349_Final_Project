@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('CONNECTION STRING HERE', { useNewURLParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb+srv://markwiedeman5:markWie81638!@cluster0.zoym3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', { useNewURLParser: true, useUnifiedTopology: true});
 
 
 const db = mongoose.connection;
