@@ -1,0 +1,145 @@
+<!doctype html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Toy Car Trade</title>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+	</head>
+	<style>
+		.text-black{
+			color: #000
+		}
+		.text-navbar{
+			font-size: 20px;
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+		.text-body{
+			margin: auto;
+			margin-top:150px;
+		}
+		.cart-image{
+			width: 50px;
+			height:50px;
+		}
+		.post-container{
+			display:flex;
+			margin:auto;
+			margin-top:150px;
+		}
+		.post-column{
+			display:flex;
+			align-items: center;
+			margin-right: 1.5em;
+			padding-bottom: 10px;
+			margin-top: 10px;
+		}
+		.post-row{
+			display:flex;
+		}
+		.post-attribute{
+			width: 10%;
+		}
+		.post-enter{
+			width:90%;
+		}
+		.post-button{
+			display:block;
+			margin:40px auto 40px auto;
+		}
+		.post-item-image{
+			display:block;
+			margin:12px auto 12px auto;
+			width: 350px;
+			height: auto;
+			border-radius: 20px;
+		}
+		.post-item-description{
+			display:block;
+			text-align:center;
+		}
+		.bg-soft-blue{
+			background-color: #ABD7EB;
+		}
+
+	</style>
+	<body>
+
+		<!--This is the top banner--->
+    <nav class="navbar navbar-expand-lg fixed-top bg-primary">
+      <div class='container-fluid'>
+        <div class="navbar-header">
+          <a href="http://localhost:4020/homepage.html" class="navbar-brand">
+            <img src="ToyCarTradeLogo.PNG" alt="TOY CAR TRADE">
+          </a>
+        </div>
+				<ul class="navbar-nav w-80">
+			    <li class="nav-item">
+			      <a class="nav-link text-black text-navbar" href="#">SEARCH</a>
+			    </li>
+			    <li class="nav-item">
+			      <a class="nav-link text-black text-navbar" href="http://localhost:4020/account.html">POST CAR</a>
+			    </li>
+			    <li class="nav-item">
+			      <a class="nav-link text-black text-navbar" href="#">AUCTIONS</a>
+			    </li>
+					<li class="nav-item">
+			      <a class="nav-link text-black text-navbar" href="http://localhost:4020/account.html">VIEW ACCOUNT</a>
+			    </li>
+					<li class="nav-item">
+			      <a class="nav-link text-black text-navbar" href="http://localhost:4020/account.html">SHOPPING CART</a>
+			    </li>
+			  </ul>
+				<ul>
+        <button class="btn btn-success navbar-btn navbar-right" onclick="location.href='http://localhost:4020/registration.html'">Register</button>
+        <button class="btn btn-dark navbar-btn navbar-right" onclick="location.href='http://localhost:4020/login.html'">Login</button>
+				</ul>
+				<div class="navbar-header">
+          <a href="http://localhost:4020/account.html" class="navbar-brand">
+            <img class="cart-image" src="cart.png" alt="Shopping Cart">
+          </a>
+        </div>
+      </div>
+    </nav>
+
+		<div class="container text-body bg-soft-blue">
+			<h3 class="bg-primary text-light text-center">New Post Details</h3>
+			<form>
+				<div class="post-row">
+					<span class="post-column post-attribute">Car Posted: </span>
+					<input class="post-column post-enter" type="text" id="carName" placeholder="Car Name">
+				</div>
+				<div class="post-row">
+					<span class="post-column post-attribute">Car Price: $</span>
+					<input class="post-column post-enter" type="number" id="carPrice" placeholder="Car Price">
+				</div>
+				<div class="post-row">
+					<span class="post-column post-attribute">Car Description: </span>
+					<input class="post-column post-enter" type="text" id="carDescription" placeholder="Car Description">
+				</div>
+				<div class="post-row">
+					<span class="post-column post-attribute">Car Picture: </span>
+					<input class="post-column post-enter" type="file" accept="image/png, image/PNG, image/jpg, image/jpeg" id="carPicture" placeholder="Car Picture">
+				</div>
+				<img src="img/slide3.jpg" class="post-item-image">
+				<div class="post-row post-item-description">
+					<small> Your Post Image Will Look Like this</small>
+				</div>
+				<div>
+					<button class="post-button btn btn-primary">Post Car</button>
+				</div>
+			</form>
+		</div>
+
+
+
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+
+	</body>
+</html>
