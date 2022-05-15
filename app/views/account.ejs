@@ -1,0 +1,269 @@
+<!doctype html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Toy Car Trade</title>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="account.js" defer></script>
+		<script src="account2.js"> defer</script>
+	</head>
+	<style>
+		.text-orange{
+			color: #E85900;
+		}
+
+		.text-red{
+			color: #C40000;
+		}
+
+		.text-darkred{
+			color: #910000;
+		}
+		.text-black{
+			color: #000
+		}
+		.text-navbar{
+			font-size: 20px;
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+		.text-body{
+			margin:auto;
+			margin-top:150px;
+		}
+		.bg-soft-blue{
+			background-color: #ABD7EB;
+		}
+		.cart-image{
+			width: 50px;
+			height:50px;
+		}
+		.btn-new-post{
+			margin: 10px;
+		}
+		.cart-header{
+			font-weight:bold;
+			font-size: 1.2em;
+			color: #333;
+		}
+		.cart-column{
+			display:flex;
+			align-items: center;
+			border-bottom: 1px solid black;
+			margin-right: 1.5em;
+			padding-bottom: 10px;
+			margin-top: 10px;
+		}
+		.cart-row{
+			display:flex;
+		}
+		.cart-item{
+			width:55%;
+		}
+		.cart-price{
+			width:45%;
+			font-size:1.2em;
+			color:#333;
+		}
+		.cart-item-title{
+			color:#333;
+			margin-left:.5em;
+			font-size:1.2em;
+		}
+		.cart-item-image{
+			width: 75px;
+			height: auto;
+			border-radius: 10px;
+		}
+		.cart-row:last-child{
+			border-bottom: 1px solid black;
+		}
+		.cart-row:last-child .cart-column{
+			border:none;
+		}
+		.cart-total{
+			text-align: end;
+			margin-top: 10px;
+			margin-right: 10px;
+		}
+		.cart-total-title{
+			font-weight: bold;
+			font-size: 1.5em;
+			color: black;
+			margin-right: 20px;
+		}
+		.cart-total-price{
+			color: #333;
+			font-size:1.2em;
+		}
+		.btn-purchase{
+			display:block;
+			margin:40px auto 40px auto;
+		}
+		.post-item-image{
+			width: 200px;
+			height: auto;
+			border-radius: 20px;
+		}
+		.post-column{
+			display:flex;
+			align-items: center;
+			margin-right: 1.5em;
+			padding-bottom: 10px;
+			margin-top: 10px;
+		}
+		.post-row{
+			display:flex;
+			border-bottom: 1px solid black;
+		}
+		.post-image{
+			width:40%;
+		}
+		.post-name{
+			width:20%;
+		}
+		.post-price{
+			width:20%;
+		}
+		.post-delete{
+			width:20%;
+		}
+
+	</style>
+	<body>
+
+		<!--This is the top banner--->
+    <nav class="navbar navbar-expand-lg fixed-top bg-primary">
+      <div class='container-fluid'>
+        <div class="navbar-header">
+          <a href="/" class="navbar-brand">
+            <img src="/img/ToyCarTradeLogo.png" alt="TOY CAR TRADE">
+          </a>
+        </div>
+				<ul class="navbar-nav w-80">
+			    <li class="nav-item">
+			      <a class="nav-link text-black text-navbar" href="#">SEARCH</a>
+			    </li>
+			    <li class="nav-item">
+			      <a class="nav-link text-black text-navbar" href="/account">POST CAR</a>
+			    </li>
+			    <li class="nav-item">
+			      <a class="nav-link text-black text-navbar" href="#">AUCTIONS</a>
+			    </li>
+					<li class="nav-item">
+			      <a class="nav-link text-black text-navbar" href="/account">VIEW ACCOUNT</a>
+			    </li>
+					<li class="nav-item">
+			      <a class="nav-link text-black text-navbar" href="/account">SHOPPING CART</a>
+			    </li>
+			  </ul>
+				<div class="navbar-header">
+          <a href="/account" class="navbar-brand">
+            <img class="cart-image" src="/img/cart.png" alt="Shopping Cart">
+          </a>
+        </div>
+      </div>
+    </nav>
+
+		<!-- start of the 3 columns -->
+		<div id="outer" class="row text-body">
+			<!-- account column that holds the account info like name, email, etc -->
+			<div id="account" class="col-2">
+				<div id="accountInner" class="col bg-soft-blue border border-primary ">
+					<h3 class="bg-primary text-light text-center">Account Options</h3>
+					<ul id="accountInfo" style="list-style-type: none;">
+						<!-- inner area where actual data is -->
+						<label class="font-weight-bold">Name: </label>
+						<li>
+							<span>John Cash</span>
+							<button class='btn-sm btn-success float-right'>edit</button>
+						</li>
+						<label class="font-weight-bold">Username: </label>
+						<li>
+							<span>OnePieceAtATime66</span>
+							<button class='btn-sm btn-success float-right'>edit</button>
+						</li>
+						<label class="font-weight-bold">Email: </label>
+						<li>
+							<span>JohnnyC@gmail.com</span>
+							<button class='btn-sm btn-success float-right'>edit</button>
+						</li>
+						<label class="font-weight-bold">Password: </label>
+						<li>
+							<span>password</span>
+							<button class='btn-sm btn-success float-right'>edit</button>
+						</li>
+						<label class="font-weight-bold">Phone: </label>
+						<li>
+							<span>123-456-7890</span>
+							<button class='btn-sm btn-success float-right'>edit</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- middle section that holds accounts posts -->
+			<div class="col-4">
+				<div class="col bg-soft-blue border border-primary ">
+					<h3 class="bg-primary text-light text-center">My Posts</h3>
+					<div class="post-row">
+						<img class="post-column post-image post-item-image" src="cart.png" alt="Shopping Cart">
+						<span class="post-column post-name">Sample Car</span>
+						<span class="post-column post-price">$12.34</span>
+						<div class="post-column post-delete">
+							<div>
+								<button class="btn btn-danger">DELETE</button>
+							</div>
+						</div>
+					</div>
+					<button class='btn btn-new-post btn-success' onclick="location.href='http://localhost:4020/postCar.html'">Create New Post</button>
+				</div>
+			</div>
+			<!-- third section that holds the cart -->
+			<div class="col-4">
+				<div class="col bg-soft-blue border border-primary ">
+					<h3 class="bg-primary text-light text-center">My Shopping Cart</h3>
+					<div class="cart-row">
+						<span class="cart-item cart-header cart-column">ITEM</span>
+						<span class="cart-price cart-header cart-column">PRICE</span>
+					</div>
+						<div class='cart-items'>
+							<div class="cart-row">
+								<div class="cart-item cart-column">
+									<img src="cart.png" width="100" height="100" class="cart-item-image">
+									<span class="cart-item-title">Sample Car 1</span>
+								</div>
+								<span class="cart-price cart-column">$12.34<span>
+								<button id="remove"class='btn btn-new-post btn-danger'>REMOVE</button>
+							</div>
+							<div class="cart-row">
+								<div class="cart-item cart-column">
+									<img src="cart.png" width="100" height="100" class="cart-item-image">
+									<span class="cart-item-title">Sample Car</span>
+								</div>
+								<span class="cart-price cart-column">$12.34<span>
+								<button id="remove" class='btn btn-new-post btn-danger'>REMOVE</button>
+							</div>
+						</div>
+						<hr>
+						<div class="cart-total">
+							<strong class="cart-total-title">TOTAL:</strong>
+							<span class="cart-total-price">$24.68</span>
+						</div>
+						<div>
+							<button class='btn btn-new-post btn-primary btn-lg btn-purchase'>Purchase</button>
+						</div>
+				</div>
+			</div>
+		</div>
+
+
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+
+	</body>
+</html>
