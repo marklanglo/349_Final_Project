@@ -140,7 +140,20 @@ exports.registerPage = async(req, res) => {
  * GET /account
  * account page
  */
-   exports.accountPage = async(req, res) => {
-    res.render('account', {title: 'Toy Car Trade - Account Page' });
+exports.accountPage = async(req, res) => {
+	try{
+		const user = await User.find({});
+    	res.render('account', {title: 'Toy Car Trade - Account Page', user });
+	} catch (error) {
+		res.status(500).send({message: error.message || "Error Occured"});
+}
  }
 
+   /**
+ * GET /postcar
+ * post car page
+ */
+exports.postcarPage = async(req, res) => {
+		res.render('postcar', {title: 'Toy Car Trade - Post Car' });
+}
+ 

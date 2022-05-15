@@ -14,6 +14,6 @@ router.post('/register', carController.registerPageOnSubmit);
 router.get('/secret', carController.secretPage);
 router.get('/logout', carController.logout);
 router.get('/account', carController.accountPage);
-
+router.get('/postcar', carController.postcarPage);
 
 module.exports = router;
