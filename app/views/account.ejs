@@ -10,8 +10,8 @@
 		<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
   	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-		<script src="account.js" defer></script>
-		<script src="account2.js"> defer</script>
+		<script src="/js/account.js" defer></script>
+		<script src="/js/account2.js"> defer</script>
 	</head>
 	<style>
 		.text-orange{
@@ -173,40 +173,44 @@
 
 		<!-- start of the 3 columns -->
 		<div id="outer" class="row text-body">
-			<!-- account column that holds the account info like name, email, etc -->
-			<div id="account" class="col-2">
-				<div id="accountInner" class="col bg-soft-blue border border-primary ">
-					<h3 class="bg-primary text-light text-center">Account Options</h3>
-					<ul id="accountInfo" style="list-style-type: none;">
-						<!-- inner area where actual data is -->
-						<label class="font-weight-bold">Name: </label>
-						<li>
-							<span>John Cash</span>
-							<button class='btn-sm btn-success float-right'>edit</button>
-						</li>
-						<label class="font-weight-bold">Username: </label>
-						<li>
-							<span>OnePieceAtATime66</span>
-							<button class='btn-sm btn-success float-right'>edit</button>
-						</li>
-						<label class="font-weight-bold">Email: </label>
-						<li>
-							<span>JohnnyC@gmail.com</span>
-							<button class='btn-sm btn-success float-right'>edit</button>
-						</li>
-						<label class="font-weight-bold">Password: </label>
-						<li>
-							<span>password</span>
-							<button class='btn-sm btn-success float-right'>edit</button>
-						</li>
-						<label class="font-weight-bold">Phone: </label>
-						<li>
-							<span>123-456-7890</span>
-							<button class='btn-sm btn-success float-right'>edit</button>
-						</li>
-					</ul>
-				</div>
-			</div>
+			<% if(user != ''){ %>
+				<% user.forEach(function(user, index) { %>
+					<!-- account column that holds the account info like name, email, etc -->
+					<div id="account" class="col-2">
+						<div id="accountInner" class="col bg-soft-blue border border-primary ">
+							<h3 class="bg-primary text-light text-center">Account Options</h3>
+							<ul id="accountInfo" style="list-style-type: none;">
+								<!-- inner area where actual data is -->
+								<label class="font-weight-bold">Name: </label>
+								<li>
+									<a><%- user.firstName %> <%-user.lastName  %>  </a>
+									<button class='btn-sm btn-success float-right'>edit</button>
+								</li>
+								<label class="font-weight-bold">Username: </label>
+								<li>
+									<a> <%- user.userName %> </a>
+									<button class='btn-sm btn-success float-right'>edit</button>
+								</li>
+								<label class="font-weight-bold">Email: </label>
+								<li>
+									<a><%- user.email %> </a>
+									<button class='btn-sm btn-success float-right'>edit</button>
+								</li>
+								<label class="font-weight-bold">Password: </label>
+								<li>
+									<span>*********</span>
+									<button class='btn-sm btn-success float-right'>edit</button>
+								</li>
+								<label class="font-weight-bold">Phone: </label>
+								<li>
+									<a><%- user.phoneNumber%> </a>
+									<button class='btn-sm btn-success float-right'>edit</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				<% })%>
+		<%}%>
 			<!-- middle section that holds accounts posts -->
 			<div class="col-4">
 				<div class="col bg-soft-blue border border-primary ">
