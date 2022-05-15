@@ -15,5 +15,10 @@ router.get('/secret', carController.secretPage);
 router.get('/logout', carController.logout);
 router.get('/account', carController.accountPage);
 router.get('/postcar', carController.postcarPage);
+router.post('/account' ,carController.accountPageOnEdit);
+router.get('/searchResults', carController.searchResults);
+router.post('/postcar', carController.postcarPost);
+router.get('/viewPost/:id', carController.exploreCar);
+router.get('/viewPost', carController.viewPost);
 
 module.exports = router;

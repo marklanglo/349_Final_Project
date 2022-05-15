@@ -40,7 +40,7 @@
 			width:100%;
 			text-align: center;
 			font-weight: bold;
-			font-size:1.5em
+			font-size:1.5em;
 			color:#333;
 			margin-bottom:15px;
 		}
@@ -75,10 +75,10 @@
         </div>
 				<ul class="navbar-nav w-80">
 			    <li class="nav-item">
-			      <a class="nav-link text-black text-navbar" href="#">SEARCH</a>
+			      <a class="nav-link text-black text-navbar" href="/searchResults">SEARCH</a>
 			    </li>
 			    <li class="nav-item">
-			      <a class="nav-link text-black text-navbar" href="/account">POST CAR</a>
+			      <a class="nav-link text-black text-navbar" href="/postcar">POST CAR</a>
 			    </li>
 			    <li class="nav-item">
 			      <a class="nav-link text-black text-navbar" href="#">AUCTIONS</a>
@@ -100,90 +100,24 @@
 
 		<div class="container text-body bg-soft-blue">
 			<h2>Search Results</h2>
+			<% if (car != ''){%>
+				<%car.forEach(function(car, index) {%>
+			<a href="/viewPost/<%- car._id%>" >
 			<div class="search-items">
 				<!-- this is the inside of the results container -->
 				<!-- this is a sample car -->
 				<div class="search-item">
-					<span class="search-item-title">Car Name 1</span>
+					<span class="search-item-title"><%- car.carName%></span>
 					<img class="search-item-image" src="/img/slide1.jpg">
 					<div class="search-item-details">
-						<span class="search-item-price">$15.00</span>
-						<button class="btn btn-primary search-item-btn"> VIEW CAR </button>
-					</div>
-				</div>
-				<!-- this is a sample car -->
-				<div class="search-item">
-					<span class="search-item-title">Car Name 1</span>
-					<img class="search-item-image" src="/img/slide1.jpg">
-					<div class="search-item-details">
-						<span class="search-item-price">$15.00</span>
-						<button class="btn btn-primary search-item-btn"> VIEW CAR </button>
-					</div>
-				</div>
-				<!-- this is a sample car -->
-				<div class="search-item">
-					<span class="search-item-title">Car Name 1</span>
-					<img class="search-item-image" src="/img/slide1.jpg">
-					<div class="search-item-details">
-						<span class="search-item-price">$15.00</span>
-						<button class="btn btn-primary search-item-btn"> VIEW CAR </button>
-					</div>
-				</div>
-				<!-- this is a sample car -->
-				<div class="search-item">
-					<span class="search-item-title">Car Name 1</span>
-					<img class="search-item-image" src="/img/slide1.jpg">
-					<div class="search-item-details">
-						<span class="search-item-price">$15.00</span>
-						<button class="btn btn-primary search-item-btn"> VIEW CAR </button>
-					</div>
-				</div>
-				<!-- this is a sample car -->
-				<div class="search-item">
-					<span class="search-item-title">Car Name 1</span>
-					<img class="search-item-image" src="/img/slide1.jpg">
-					<div class="search-item-details">
-						<span class="search-item-price">$15.00</span>
-						<button class="btn btn-primary search-item-btn"> VIEW CAR </button>
-					</div>
-				</div>
-				<!-- this is a sample car -->
-				<div class="search-item">
-					<span class="search-item-title">Car Name 1</span>
-					<img class="search-item-image" src="/img/slide1.jpg">
-					<div class="search-item-details">
-						<span class="search-item-price">$15.00</span>
-						<button class="btn btn-primary search-item-btn"> VIEW CAR </button>
-					</div>
-				</div>
-				<!-- this is a sample car -->
-				<div class="search-item">
-					<span class="search-item-title">Car Name 1</span>
-					<img class="search-item-image" src="/img/slide1.jpg">
-					<div class="search-item-details">
-						<span class="search-item-price">$15.00</span>
-						<button class="btn btn-primary search-item-btn"> VIEW CAR </button>
-					</div>
-				</div>
-				<!-- this is a sample car -->
-				<div class="search-item">
-					<span class="search-item-title">Car Name 1</span>
-					<img class="search-item-image" src="/img/slide1.jpg">
-					<div class="search-item-details">
-						<span class="search-item-price">$15.00</span>
-						<button class="btn btn-primary search-item-btn"> VIEW CAR </button>
-					</div>
-				</div>
-				<!-- this is a sample car -->
-				<div class="search-item">
-					<span class="search-item-title">Car Name 1</span>
-					<img class="search-item-image" src="/img/slide1.jpg">
-					<div class="search-item-details">
-						<span class="search-item-price">$15.00</span>
+						<span class="search-item-price">$<%- car.carPrice%></span>
 						<button class="btn btn-primary search-item-btn"> VIEW CAR </button>
 					</div>
 				</div>
 			</div>
+		</a>
+		<%})%>
+		<%}%>
 		</div>
 
 		<script src="bootstrap/js/bootstrap.min.js"></script>
