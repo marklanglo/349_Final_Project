@@ -109,34 +109,31 @@
     </nav>
 
 		<div class="container text-body bg-soft-blue">
-			<form action="/postcar" method="post">
 			<h3 class="bg-primary text-light text-center">New Post Details</h3>
 			<form>
-				<div class="post-row">
+				<div class="post-row-car">
 					<span class="post-column post-attribute">Car Posted: </span>
-					<input class="post-column post-enter" type="text" name ="carName" id="carName" placeholder="Car Name">
+					<input class="post-column post-enter" type="text" id="carName" placeholder="Car Name">
 				</div>
-				<div class="post-row">
+				<div class="post-row-car">
 					<span class="post-column post-attribute">Car Price: $</span>
-					<input class="post-column post-enter" type="number" name="carPrice" id="carPrice" placeholder="Car Price">
+					<input class="post-column post-enter" type="number" id="carPrice" placeholder="Car Price">
 				</div>
-				<div class="post-row">
+				<div class="post-row-car">
 					<span class="post-column post-attribute">Car Description: </span>
-					<input class="post-column post-enter" type="text" name= "carDescription" id="carDescription" placeholder="Car Description">
+					<input class="post-column post-enter" type="text" id="carDescription" placeholder="Car Description">
 				</div>
-				<div class="post-row">
+				<div class="post-row-car">
 					<span class="post-column post-attribute">Car Picture: </span>
-					<input class="post-column post-enter" type="file" accept="image/png, image/PNG, image/jpg, image/jpeg" name="carPicture" id="carPicture" placeholder="Car Picture">
+					<input class="post-column post-enter" type="file" accept="image/png, image/PNG, image/jpg, image/jpeg" id="carPicture" placeholder="Car Picture">
 				</div>
 				<img src="img/slide3.jpg" class="post-item-image">
-				<div class="post-row post-item-description">
+				<div class="post-row-car post-item-description">
 					<small> Your Post Image Will Look Like this</small>
 				</div>
 				<div>
-					<input type="submit" class="post-button btn btn-primary" id="submitCar" name="submitCar"
-					value="Post Car" />
+					<button class="post-button btn btn-primary">Post Car</button>
 				</div>
-			</form>
 			</form>
 		</div>
 
